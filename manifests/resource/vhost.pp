@@ -127,6 +127,7 @@ define nginx::resource::vhost (
   $location_cfg_prepend   = undef,
   $location_cfg_append    = undef,
   $try_files              = undef,
+  $rewrite                = undef,
   $auth_basic             = undef,
   $auth_basic_user_file   = undef,
   $vhost_cfg_prepend      = undef,
