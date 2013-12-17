@@ -6,8 +6,8 @@ server {
 <% end %>
   server_name           <%= @rewrite_www_to_non_www ? @name.gsub(/^www\./, '') : @server_name.join(" ") %>;
 
-  <%if (defined? rewrite) %>
-  rewrite <%= rewrite %>;
+  <%if (defined? @rewrite) %>
+  rewrite <%= @rewrite %>;
   <%end %>
 <% if defined? @auth_basic -%>
   auth_basic           "<%= @auth_basic %>";
